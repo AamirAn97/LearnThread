@@ -22,5 +22,5 @@ public class ThreadTester {
 
 /*
 In the above program 2 threads will be running, one is the main thread and other is t1 thread, hence t1 will
-be the child thread of main thread since it was born from the main thread. So if we start another thread from a
+be the child thread of main thread since it was born from the main thread. So if we start another thread from an
 already existing thread then there will be a parent child relation between the 2 threads.*/
