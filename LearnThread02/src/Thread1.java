@@ -1,5 +1,10 @@
-//Creating thread class by implementing runnable interface
-public class Thread2 implements Runnable{
+// Creating a thread by extending Thread class
+public class Thread1 extends Thread {
+
+    public Thread1(String threadName) {
+        super(threadName);
+    }
+
     @Override
     public void run() {
         for(int i=0; i<5; i++){
