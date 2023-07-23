@@ -6,7 +6,7 @@ public class ThreadTester {
 //        If we want we can pass thread name in construct or leave it as it is
 //        Thread thread = new Thread(new Thread2());
 //        Since Runnable is a functional interface, we can also create thread using lambda expression
-//        as shown below.
+//        as shown below. Compiler will take care of all the boilerplate code.
         Thread thread = new Thread(()->{
             for(int i=0; i<5; i++){
                 // Thread.currentThread() returns the current instance of the thread, will return
