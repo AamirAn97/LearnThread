@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c223ed54-5c98-4159-8a97-fd8936c70e4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThreadTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LearnThread03/src/ThreadTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnThread03/src/ThreadTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LearnThread04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnThread04/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LearnThread04/src/ThreadTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnThread04/src/ThreadTester.java" afterDir="false" />
-    </list>
+    <list default="true" id="c223ed54-5c98-4159-8a97-fd8936c70e4d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
