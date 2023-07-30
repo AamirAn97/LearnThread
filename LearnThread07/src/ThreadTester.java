@@ -60,5 +60,19 @@ public class ThreadTester {
 * Case 1: By declaring the synchronized block inside the method that is trying to access the shared resource and passing
 * any object as lock to the parameter of the synchronized block. Any object in Java can be used as a lock except
 * primitive data types. We can't use int as a lock, but we can use instance of a wrapper class Integer as a lock.
-* Case 2:
+* This case is used when we want to make a specific code synchronized. Here, we need to explicitly provide the lock.
+* Case 2: By declaring the entire method as a synchronized block. Here, we don't need to explicitly provide the lock,
+* the object itself (this) will be considered as a lock. So, if we are having multiple synchronized methods in a class
+* then, at a time only one thread will be able to access all the synchronized methods. 'this' current object is used
+* inside a non-static methods, as a lock. For static blocks, if we want to use synchronized keyword then CLASS_NAME.class
+*  is used as a lock, since there is no object instantiation for a static block.
+* */
+
+/*
+* Compiler will be translating :
+* public synchronized boolean push(int element) {}
+* into :
+* public boolean push(int element) {
+*   synchronized(this){}
+* }
 * */
