@@ -1,0 +1,36 @@
+Volatile Keyword
+
+A Thread ineracts with the CPU and the CPU interacts with the main memory. Since the access time for cache is far more efficient than the main memory, hence
+CPU interacts with the cache memory first to get a data, if not found then it goes to the main memory. The threads don't directly read the shared data from the
+main memory, instead it reads the data locally from the cache. If the thread  updates the shared data then, it won't directly update in the main memory
+instead, it will first update it in the cache, then it will take some time to update the same shared value in the main memory. Even after the shared value is
+updated in the main memory, it will take some time to update the shared value to other thread's cache. In order to solve this problem and avoid inconsistency,
+we use 'volatile' keyword. Now, if we declare a variable as volatile then that shared data won't be written in cache and the threads would have to access it
+directly from the main memory, hence avoiding the inconsistency. Therefore, the shared data inconsistency problem is solved with volatile keyword in cost of
+the data access time.
+
+Example:
+
+package singleton;
+
+public class TVSet {
+	private static volatile TVSet tvSetInstance = null;
+	
+	private TVSet() {
+		System.out.println("TVSet instantiated");
+	}
+	
+	public static TVSet getTVSetInstance() {
+		if(tvSetInstance == null) {
+			synchronized(TVSet.class) {
+				if(tvSetInstance == null)
+					tvSetInstance = new TVSet();
+			}
+		}
+		return tvSetInstance;
+	}
+}
+
+Consider 2 threads t1 and t2 are trying to access the above singleton class. Also consider that the initial value of tvSetInstance is null. Now, lets suppose
+that t1 has accessed the TVSet class first and created a instance of TVSet class by passing all the checks, now if the tvSetInstance variable would not have
+been declared as volatile then, it would take time to do the same update in main memory for the tvSetInstance, mean while thread t2 can access the TVSet class simultaneouly and create another instance of the TVSet, hence, defying the purpose of the singleton class TVSet og having only one instance.
